@@ -6,7 +6,19 @@ module.exports = {
     pathPrefix: '/journal',
   },
   plugins: [
+    'gatsby-plugin-catch-links',
     `gatsby-plugin-react-helmet`,
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: "pages"
+      },
+    },
+
+
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,6 +26,17 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
+  
+
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [] // just in case those previously mentioned remark plugins sound cool :)
+      },
+    },
+
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
