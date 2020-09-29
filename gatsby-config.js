@@ -35,8 +35,16 @@ module.exports = {
         plugins: [] // just in case those previously mentioned remark plugins sound cool :)
       },
     },
-
-
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Libre Baskerville\:300,400,400i,700`,
+        ],
+        display: 'swap'
+      }
+    },
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
