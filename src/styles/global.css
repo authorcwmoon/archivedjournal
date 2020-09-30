@@ -1,7 +1,7 @@
 html {
-    background-color:#fafafa
-  }
-
+  background-color:#fafafa;
+  font-family: 'Libre Baskerville', serif;
+}
 
 .main {
   padding: 24px;
@@ -11,7 +11,11 @@ html {
   color: #ffffff;
 }
 
-  @font-face {
-    font-family: "Libre Baskerville";
-    src: url("../static/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf")   format("woff");
-  } 
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../static/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("woff");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', serif;
+}
