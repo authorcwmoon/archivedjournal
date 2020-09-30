@@ -12,24 +12,27 @@ html {
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Libre Baskerville";
-  src: url("../static/fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("woff");
   font-style: normal;
   font-weight: bold;
+  src: url("../static/fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("woff");
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Libre Baskerville";
-  src: url("../static/fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf") format("woff");
   font-style: italic;
   font-weight: normal;
+  src: url("../static/fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf") format("woff");
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Libre Baskerville";
-  src: url("../static/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("woff");
   font-style: normal;
   font-weight: normal;
+  src: url("../static/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("woff");
 }
 
 h1, h2, h3, h4, h5, h6 {
