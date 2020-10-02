@@ -9,6 +9,11 @@ export default {
       background: '#fafafa',
       primary: '#33e',
     },
+
+    breakpoints: {
+      mobile: "only screen and (max-width: 50rem)",
+      tablet: "only screen and (max-width: 65rem)",
+    },
     
   }
 
