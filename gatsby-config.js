@@ -9,6 +9,17 @@ module.exports = {
     'gatsby-plugin-catch-links',
     `gatsby-plugin-react-helmet`,
 
+    
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [] // just in case those previously mentioned remark plugins sound cool :)
+      },
+    },
+
+
+
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,12 +43,30 @@ module.exports = {
         name: "images"
       },
     },
+
+
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1200,
+            },
+          },
+
+
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `Libre Baskerville`,
-          `serifgit \:300,400,400i,700` // you can also specify font weights and styles
+          `muli\:300,400,400i,700` // you can also specify font weights and styles
         ],
         display: 'swap'
       },
@@ -51,24 +80,18 @@ module.exports = {
     //   },
     // },
 
-  
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
+    
+
+
+    
+        ],
       },
     },
 
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [] // just in case those previously mentioned remark plugins sound cool :)
-      },
-    },
+    
 
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+   
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

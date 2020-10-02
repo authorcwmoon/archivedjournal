@@ -1,6 +1,6 @@
 export default {
     fonts: {
-      body: 'Libre Baskerville, sans-serif',
+      main: 'Libre Baskerville, sans-serif',
       heading: '"Libre Baskerville", sans-serif',
       monospace: 'Libre Baskerville, monospace',
     },
