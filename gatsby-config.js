@@ -17,7 +17,15 @@ module.exports = {
       },
     },
 
-
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Libre Baskerville`,
+          `serif\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
 
     // {
     //   resolve: `gatsby-source-filesystem`,
@@ -36,7 +44,7 @@ module.exports = {
       },
     },
 
-
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
