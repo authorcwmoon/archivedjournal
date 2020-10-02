@@ -18,14 +18,30 @@ module.exports = {
     },
 
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/posts`,
+        name: "posts"
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: "images"
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `Libre Baskerville`,
-          `serif\:300,400,400i,700` // you can also specify font weights and styles
+          `serifgit \:300,400,400i,700` // you can also specify font weights and styles
         ],
         display: 'swap'
-      }
+      },
+    },
 
     // {
     //   resolve: `gatsby-source-filesystem`,
@@ -36,6 +52,12 @@ module.exports = {
     // },
 
   
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
 
     {
       resolve: "gatsby-transformer-remark",
