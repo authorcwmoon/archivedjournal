@@ -1,13 +1,13 @@
 import React from "react"
 import { ContainerWrapper } from "../elements"
-import { Nav } from "../components"
+import { Nav, Footer } from "../components"
 
-
-export const Container = ({children}) => {
+export const Container = ({ children }) => {
   return (
-  <ContainerWrapper>
-    <Nav />
-  {children}
+    <ContainerWrapper>
+      <Nav />
+      {children}
+      <Footer />
     </ContainerWrapper>
   )
 }
