@@ -8,7 +8,7 @@ export const FeatureImage = ({ fixed }) => {
     query {
       imageSharp(fixed: { originalName: { eq: "office.jpg" } }) {
         fixed {
-          ...Gatn sbyImageSharpFixed
+          ...GatsbyImageSharpFixed
         }
       }
     }
