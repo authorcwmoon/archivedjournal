@@ -2,12 +2,12 @@
 
 
 import React from "react"
-import { Container } from "../components"
+import { Container, FeatureImage} from "../components"
 
 const IndexPage = () => {
   return(
     <Container>
-      <h1>Hello Wold</h1>
+      <FeatureImage />
     </Container>
   )
 }
