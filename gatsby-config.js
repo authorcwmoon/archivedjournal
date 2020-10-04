@@ -5,7 +5,7 @@ module.exports = {
     url: "https://cwmoon.com",
     image:"/office.jpg",
     twitterUsername: "@cwill44",
-    author: "CWMoon",
+    author: "C.W. Moon",
   },
   plugins: [
     {
@@ -48,7 +48,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`roboto mono`, `muli\:400,400i,700,700i`],
+        fonts: [`Libre Baskerville`, `serif\:400,400i,700,700i`],
         display: "swap",
       },
     },

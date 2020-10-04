@@ -4,11 +4,11 @@ import { Button } from "../components"
 
 
 
-export const ContentCard = ({ date, title, excerpt, slug }) => {
+export const ContentCard = ({ date, title, excerpt, author, slug }) => {
   return (
     <CardWrapper>
-      <P size="xSmall" textAlign="left" margin="0 0 0.5rem 0" color="light1">
-        {date}
+      <P size="xSmall" textAlign="left" margin="0 0 0.5rem 0" color="dark3">
+        {date} - Posted by C.W. Moon
       </P>
       <H2 textAlign="left" margin="0 0 1rem 0">
         {title}
