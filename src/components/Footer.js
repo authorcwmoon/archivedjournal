@@ -59,7 +59,7 @@ export const Footer = () => {
           </a>
         </FooterSocialIcons>
         <P size="xSmall" color="dark3">
-          © 2020 Company. All right reserved.
+          © 2020 C.W. Moon. All right reserved.
         </P>
       </FooterSocialWrapper>
     </FooterWrapper>
