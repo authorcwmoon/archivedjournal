@@ -5,17 +5,17 @@ module.exports = {
     url: "https://cwmoon.com",
     image:"/office.jpg",
     twitterUsername: "@cwill44",
-    author: "CWMoons",
+    author: "CWMoon",
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
-      },
-    },
-    {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `pages`,
+    //     path: `${__dirname}/src/pages`,
+    //   },
+    // },
+    // {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
