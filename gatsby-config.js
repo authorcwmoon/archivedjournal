@@ -1,58 +1,56 @@
 module.exports = {
   siteMetadata: {
-    title: `The frequency of tales.`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `cwmoon`,
-
+    title: "The Journal of C.W. Moon",
+    description: "The frequency of stories",
+    url: "https://cwmoon.com",
+    image:"/office.jpg",
+    twitterUsername: "@cwill44",
+    author: "CWMoons",
   },
   plugins: [
-    'gatsby-plugin-catch-links',
-    `gatsby-plugin-react-helmet`,
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `pages`,
         path: `${__dirname}/src/pages`,
-        name: "pages"
       },
     },
-
-
-
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/src/images`,
-    //   },
-    // },
-
-  
-
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [] // just in case those previously mentioned remark plugins sound cool :)
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
       },
     },
-
-
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`roboto mono`, `muli\:400,400i,700,700i`],
+        display: "swap",
+      },
+    },
   ],
 }

@@ -1,6 +1,13 @@
 import React from "react"
-import containerStyles from "./container.module.css"
+import { ContainerWrapper } from "../elements"
+import { Nav, Footer } from "../components"
 
-export default function Container({ children }) {
-  return <div className={containerStyles.container}>{children}</div>
+export const Container = ({ children }) => {
+  return (
+    <ContainerWrapper>
+      <Nav />
+      {children}
+      <Footer />
+    </ContainerWrapper>
+  )
 }
