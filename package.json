@@ -7,8 +7,6 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.18",
     "@mdx-js/react": "^1.6.18",
-    "ant": "^0.2.0",
-    "antd": "^4.6.6",
     "babel-plugin-styled-components": "^1.11.1",
     "fs": "0.0.1-security",
     "gatsby": "^2.24.63",
