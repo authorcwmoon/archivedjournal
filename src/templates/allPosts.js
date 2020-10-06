@@ -28,7 +28,7 @@ const allPosts = ({ pageContext, data }) => {
           Journal
         </H1>
         <P color="dark2" textAlign="left">
-         I've been writing for the past 8 years in various formats. This journal is a running list of. 
+         I've been writing for the last 8 years in the margins of pages, random notebooks, and my text editor.  I started reading from hymn books and the back of Captain Crunch cereal boxes. This journal bridges the gap between the childhood mind and the enterprise entrepreneur journey. 
         </P>
         <H1 textAlign="left" margin="4rem 0 1rem 0rem">
           Lastest
