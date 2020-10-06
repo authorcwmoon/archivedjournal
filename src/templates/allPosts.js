@@ -8,7 +8,7 @@ import {
   Pagination,
   Seo,
 } from "../components"
-// import { H1, P } from "../elements"
+import { H1, P } from "../elements"
 
 const allPosts = ({ pageContext, data }) => {
   const { currentPage, numPages } = pageContext
@@ -24,14 +24,15 @@ const allPosts = ({ pageContext, data }) => {
       <Seo />
       {/* <FeatureImage /> */}
       <Content>
-        {/* <H1 textAlign="center" margin="0 0 1rem 0">
-          Elit rhoncus tellus proin parturient.
+        <H1 textAlign="left" margin="0 0 1rem 0">
+          Journal
         </H1>
-        <P color="dark2" textAlign="center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing
-          volutpat risus quis lorem pulvinar et pulvinar sit dictum. Eget orci,
-          orci in congue cursus nulla tincidunt facilisi.
-        </P> */}
+        <P color="dark2" textAlign="left">
+         I've been writing for the past 8 years in various formats. This journal is a running list of. 
+        </P>
+        <H1 textAlign="left" margin="4rem 0 1rem 0rem">
+          Lastest
+        </H1>
         {posts.map(post => (
           <ContentCard
             key={post.node.frontmatter.slug}
