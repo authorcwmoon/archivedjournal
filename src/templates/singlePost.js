@@ -18,7 +18,7 @@ const singlePost = ({ data }) => {
       />
       <Sidebar/>
       {/* <FeatureImage fixed={featureImage} /> */}
-      <Post padding="10rem">
+      <Post>
         <H1 margin="0 0 2rem 0">{data.mdx.frontmatter.title}</H1>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </Post>

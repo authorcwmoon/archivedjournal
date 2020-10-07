@@ -5,7 +5,6 @@ import {
   Input,
   InputRightElement,
   Button,
-  Text,
   useToast,
   useColorMode
 } from '@chakra-ui/core';
@@ -16,7 +15,14 @@ export const Subscribe = () => {
   const inputEl = useRef(null);
   const toast = useToast();
   const { colorMode } = useColorMode();
-
+  const bgColor = {
+    light: 'blue.50',
+    dark: 'blue.900'
+  };
+  const borderColor = {
+    light: 'blue.200',
+    dark: 'blue.900'
+  };
 
   const subscribe = async (e) => {
     e.preventDefault();
@@ -33,33 +39,54 @@ export const Subscribe = () => {
     });
 
     setLoading(false);
-    const { error } = await res.json();
+    try {
 
-    if (error) {
-      toast({
-        title: 'An error occurred.',
-        description: error,
-        status: 'error',
-        duration: 3000,
-        isClosable: true
-      });
+        const { error } = await res.json();
+    
+        console.log("ouch2")
+    
+    
+        if (error) {
+          toast({
+            title: 'An error occurred.',
+            description: error,
+            status: 'error',
+            duration: 3000,
+            isClosable: true
+          });
+    
+          return;
+        }
+    
+       // trackGoal('JYFUFMSF', 0);
+        inputEl.current.value = '';
+        toast({
+          title: 'Success!',
+          description: 'You are now subscribed.',
+          status: 'success',
+          duration: 3000,
+          isClosable: true
+        });
 
-      return;
-    }
+      } 
+      catch (error) {
+          
+        toast({
+            title: 'An error occurred.',
+            description: "error.message.rejectedresponse",
+            status: 'error',
+            duration: 3000,
+            isClosable: true
+          });
 
-    trackGoal('JYFUFMSF', 0);
-    inputEl.current.value = '';
-    toast({
-      title: 'Success!',
-      description: 'You are now subscribed.',
-      status: 'success',
-      duration: 3000,
-      isClosable: true
-    });
+        console.error(error);
+      }
+  
   };
 
   return (
     <SubscribeWrapper>
+       {loading && "loading..."} 
       <H2>
         Subscribe to the newsletter
       </H2>
@@ -67,26 +94,24 @@ export const Subscribe = () => {
         Get emails from me about web development, tech, and early access to new
         articles.
       </P>
-      <InputGroup size="large" mt={4}>
+      <InputGroup size="md" mt={4}>
         <Input
           aria-label="Email for newsletter"
           placeholder="tim@apple.com"
           ref={inputEl}
           type="email"
         />
-        {/* <InputRightElement width="6.75rem" height="1rem" pr="0rem">
+        <InputRightElement width="6.75rem" height="1rem">
           <Button
             isLoading={loading}
             fontWeight="bold"
             h="1.75rem"
             size="sm"
             onClick={subscribe}
-          >
-            Subscribe
-          </Button> */}
-         {/* </InputRightElement> */} */}
+          >Subscribe
+          </Button>
+         </InputRightElement> 
       </InputGroup>
-    {/* </Box> */}
     </SubscribeWrapper>
   );
 };
