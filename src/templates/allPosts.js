@@ -8,6 +8,7 @@ import {
   Subscribe,
   Pagination,
   Seo,
+  Sidebar,
 } from "../components"
 import { H1, P } from "../elements"
 
@@ -23,6 +24,7 @@ const allPosts = ({ pageContext, data }) => {
   return (
     <Container>
       <Seo />
+      <Sidebar/>
       {/* <FeatureImage /> */}
       <Content>
         <H1 textAlign="left" margin="0 0 1rem 0">

@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const SidebarWrapper = styled.main`
-  grid-column: 8 / span 12;
-//   grid-row: 2 / span 5;
+  grid-column: 12 / span 2;
+  grid-row: 2 / span 5;
   background-color: #ebf8ff;
   padding: 2em;
   padding-top: 1em;
@@ -12,7 +12,7 @@ export const SidebarWrapper = styled.main`
  // padding: ${props =>
     `${props.theme.spacings.xLarge} ${props.theme.spacings.xxLarge}`};
   box-shadow: ${props => props.theme.shadows.shadow1};
-  z-index: 10;
+  z-index: 11;
 
   h1,
   h2,
@@ -158,11 +158,14 @@ export const SidebarWrapper = styled.main`
   @media ${props => props.theme.breakpoints.tablet} {
     grid-column: 2 / span 6;
     padding: none;
+    display: none;
   }
 
   @media ${props => props.theme.breakpoints.mobile} {
    padding: none;
     // padding: ${props =>
       `${props.theme.spacings.medium} ${props.theme.spacings.large}`};
+      display: none;
+
   }
 `
