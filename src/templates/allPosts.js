@@ -5,6 +5,7 @@ import {
   Content,
   ContentCard,
   // FeatureImage,
+  Subscribe,
   Pagination,
   Seo,
 } from "../components"
@@ -49,6 +50,7 @@ const allPosts = ({ pageContext, data }) => {
         prevPage={prevPage}
         nextPage={nextPage}
       />
+      <Subscribe/>
     </Container>
   )
 }
