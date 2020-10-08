@@ -9,6 +9,7 @@ import {
   Pagination,
   Seo,
 } from "../components"
+
 import { H1, P } from "../elements"
 
 const allPosts = ({ pageContext, data }) => {
@@ -50,7 +51,7 @@ const allPosts = ({ pageContext, data }) => {
         prevPage={prevPage}
         nextPage={nextPage}
       />
-      <Subscribe/>
+      <Subscribe />
     </Container>
   )
 }

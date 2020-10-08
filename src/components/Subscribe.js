@@ -11,7 +11,7 @@ import {
   useToast,
   useColorMode
 } from '@chakra-ui/core';
-import { SubscribeWrapper, P, H2 } from "../elements"
+import { SubscribeWrapper, P, H2 } from "../elements";
 
 
 export const Subscribe = () => {
@@ -67,10 +67,11 @@ export const Subscribe = () => {
       isClosable: true
     });
   };
+
+
   return (
     <SubscribeWrapper>
-       {loading && "loading..."} 
-      <H2>
+     <H2>
         Subscribe to the newsletter
       </H2>
       <P>
@@ -84,18 +85,20 @@ export const Subscribe = () => {
           ref={inputEl}
           type="email"
         />
-        <InputRightElement width="6.75rem" height="1rem">
+        <InputRightElement width="6.75rem">
           <Button
             isLoading={loading}
             fontWeight="bold"
             h="1.75rem"
             size="sm"
             onClick={subscribe}
-          >Subscribe
+          >
+            Subscribe
           </Button>
-         </InputRightElement> 
+        </InputRightElement>
       </InputGroup>
     </SubscribeWrapper>
   );
 };
+
 
