@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { H1 } from "../elements"
 //import { Container, Post, FeatureImage, Seo } from "../components"
-import { Container, Post, Seo } from "../components"
+import { Container, Sidebar, Subscribe, Post, Seo } from "../components"
 const singlePost = ({ data }) => {
   // const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fixed
 
@@ -16,11 +16,13 @@ const singlePost = ({ data }) => {
         // image={seoImage}
         description={data.mdx.frontmatter.excerpt}
       />
+      <Sidebar/>
       {/* <FeatureImage fixed={featureImage} /> */}
       <Post>
         <H1 margin="0 0 2rem 0">{data.mdx.frontmatter.title}</H1>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </Post>
+      <Subscribe/>
     </Container>
   )
 }
