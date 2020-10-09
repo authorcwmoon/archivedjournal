@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { H1 } from "../elements"
 //import { Container, Post, FeatureImage, Seo } from "../components"
-import { Container, Sidebar, Subscribe, Post, Seo } from "../components"
+import { Container, Sidebar, Post, Seo } from "../components"
 const singlePost = ({ data }) => {
   // const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fixed
 
