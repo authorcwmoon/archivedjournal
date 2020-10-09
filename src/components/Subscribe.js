@@ -114,7 +114,7 @@ export const Subscribe = () => {
 
   return (
     <SubscribeWrapper>
-      <form netlify name="contact">
+    <form name="contact" data-netlify-honeypot="bot-field" action="success">
      <H2>
     Subscribe to the newsletter
       </H2>
@@ -124,9 +124,19 @@ export const Subscribe = () => {
       </P>
       <InputGroup size="md" mt={4}>
         <Input
-          aria-label="Email for newsletter"
-          placeholder="tim@apple.com"
-          type="email"
+            class="form-control valid"
+            name="email"
+            id="email"
+            type="email"
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Enter your Email'"
+            placeholder="Enter your Email"
+          />
+        <input
+        class="hidden"
+        name="bot-field"
+        placeholder="Don't fill this out if you're a human"
+        />
         />
         <InputRightElement width="6.75rem" >
           <Button
