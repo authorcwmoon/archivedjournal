@@ -1,14 +1,18 @@
 import React, { useState, useRef } from 'react';
 import { trackGoal } from 'fathom-client';
 import {
+  
   InputGroup,
+  
   Input,
   InputRightElement,
   Button,
+  Text,
   useToast,
   useColorMode
 } from '@chakra-ui/core';
-import { SubscribeWrapper, P, H2 } from "../elements"
+import { SubscribeWrapper, P, H2 } from "../elements";
+
 
 export const Subscribe = () => {
   // const [loading, setLoading] = useState(false);
@@ -83,12 +87,38 @@ export const Subscribe = () => {
   //     }
   
   // };
+    setLoading(false);
+    const { error } = await res.json();
+
+    if (error) {
+      toast({
+        title: 'An error occurred.',
+        description: error,
+        status: 'error',
+        duration: 3000,
+        isClosable: true
+      });
+
+      return;
+    }
+
+    trackGoal('JYFUFMSF', 0);
+    inputEl.current.value = '';
+    toast({
+      title: 'Success!',
+      description: 'You are now subscribed.',
+      status: 'success',
+      duration: 3000,
+      isClosable: true
+    });
+  };
 
   return (
     <SubscribeWrapper>
       <form netlify name="contact">
       <H2>
-        Subscribe to the newsletter
+     <H2>
+    Subscribe to the newsletter
       </H2>
       <P>
         Get emails from me about web development, tech, and early access to new
@@ -106,11 +136,14 @@ export const Subscribe = () => {
             h="1.75rem"
             size="sm"
           >Subscribe
+          >
+            Subscribe
           </Button>
-         </InputRightElement> 
+        </InputRightElement>
       </InputGroup>
       </form>
     </SubscribeWrapper>
   );
 };
+
 
