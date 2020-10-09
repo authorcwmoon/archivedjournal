@@ -110,13 +110,11 @@ export const Subscribe = () => {
   //     status: 'success',
   //     duration: 3000,
   //     isClosable: true
-  //   });
-  // };
+  
 
   return (
     <SubscribeWrapper>
       <form netlify name="contact">
-      <H2>
      <H2>
     Subscribe to the newsletter
       </H2>
@@ -136,8 +134,6 @@ export const Subscribe = () => {
             h="1.75rem"
             size="sm"
           >Subscribe
-          >
-            Subscribe
           </Button>
         </InputRightElement>
       </InputGroup>
