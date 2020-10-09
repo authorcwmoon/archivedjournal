@@ -119,7 +119,7 @@ export const Subscribe = () => {
      method="POST" 
      data-netlify="true" 
      data-netlify-honeypot="bot-field"
-     action="https://aashni.me/confirm"
+     action="https://cwmoon.com"
      >
     <input type="hidden" name="form-name" value="contact" />
 
@@ -142,6 +142,7 @@ export const Subscribe = () => {
         <InputRightElement width="6.75rem" >
           <Button
             fontWeight="bold"
+            type="submit"
             h="1.75rem"
             size="sm"
           >Subscribe
