@@ -114,7 +114,15 @@ export const Subscribe = () => {
 
   return (
     <SubscribeWrapper>
-    <form name="contact" data-netlify-honeypot="bot-field" action="success">
+     <form 
+     name="contact" 
+     method="POST" 
+     data-netlify="true" 
+     data-netlify-honeypot="bot-field"
+     action="https://aashni.me/confirm"
+     >
+    <input type="hidden" name="form-name" value="contact" />
+
      <H2>
     Subscribe to the newsletter
       </H2>
@@ -124,19 +132,12 @@ export const Subscribe = () => {
       </P>
       <InputGroup size="md" mt={4}>
         <Input
-            class="form-control valid"
             name="email"
             id="email"
             type="email"
             onfocus="this.placeholder = ''"
             onblur="this.placeholder = 'Enter your Email'"
             placeholder="Enter your Email"
-          />
-        <input
-        class="hidden"
-        name="bot-field"
-        placeholder="Don't fill this out if you're a human"
-        />
         />
         <InputRightElement width="6.75rem" >
           <Button
