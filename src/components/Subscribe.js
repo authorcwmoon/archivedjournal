@@ -11,82 +11,82 @@ import {
 import { SubscribeWrapper, P, H2 } from "../elements"
 
 export const Subscribe = () => {
-  const [loading, setLoading] = useState(false);
-  const inputEl = useRef(null);
-  const toast = useToast();
-  const { colorMode } = useColorMode();
-  const bgColor = {
-    light: 'blue.50',
-    dark: 'blue.900'
-  };
-  const borderColor = {
-    light: 'blue.200',
-    dark: 'blue.900'
-  };
+  // const [loading, setLoading] = useState(false);
+  // const inputEl = useRef(null);
+  // const toast = useToast();
+  // const { colorMode } = useColorMode();
+  // const bgColor = {
+  //   light: 'blue.50',
+  //   dark: 'blue.900'
+  // };
+  // const borderColor = {
+  //   light: 'blue.200',
+  //   dark: 'blue.900'
+  // };
 
-  const subscribe = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  // const subscribe = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
 
-    const res = await fetch('/api/subscribe', {
-      body: JSON.stringify({
-        email: inputEl.current.value
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      method: 'POST'
-    });
+  //   const res = await fetch('/api/subscribe', {
+  //     body: JSON.stringify({
+  //       email: inputEl.current.value
+  //     }),
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     method: 'POST'
+  //   });
 
-    setLoading(false);
-    try {
+  //   setLoading(false);
+  //   try {
 
-        const { error } = await res.json();
+  //       const { error } = await res.json();
     
-        console.log("ouch2")
+  //       console.log("ouch2")
     
     
-        if (error) {
-          toast({
-            title: 'An error occurred.',
-            description: error,
-            status: 'error',
-            duration: 3000,
-            isClosable: true
-          });
+  //       if (error) {
+  //         toast({
+  //           title: 'An error occurred.',
+  //           description: error,
+  //           status: 'error',
+  //           duration: 3000,
+  //           isClosable: true
+  //         });
     
-          return;
-        }
+  //         return;
+  //       }
     
-       // trackGoal('JYFUFMSF', 0);
-        inputEl.current.value = '';
-        toast({
-          title: 'Success!',
-          description: 'You are now subscribed.',
-          status: 'success',
-          duration: 3000,
-          isClosable: true
-        });
+  //      // trackGoal('JYFUFMSF', 0);
+  //       inputEl.current.value = '';
+  //       toast({
+  //         title: 'Success!',
+  //         description: 'You are now subscribed.',
+  //         status: 'success',
+  //         duration: 3000,
+  //         isClosable: true
+  //       });
 
-      } 
-      catch (error) {
+  //     } 
+  //     catch (error) {
           
-        toast({
-            title: 'An error occurred.',
-            description: "error.message.rejectedresponse",
-            status: 'error',
-            duration: 3000,
-            isClosable: true
-          });
+  //       toast({
+  //           title: 'An error occurred.',
+  //           description: "error.message.rejectedresponse",
+  //           status: 'error',
+  //           duration: 3000,
+  //           isClosable: true
+  //         });
 
-        console.error(error);
-      }
+  //       console.error(error);
+  //     }
   
-  };
+  // };
 
   return (
     <SubscribeWrapper>
-       {loading && "loading..."} 
+      <form netlify name="contact">
       <H2>
         Subscribe to the newsletter
       </H2>
@@ -98,20 +98,18 @@ export const Subscribe = () => {
         <Input
           aria-label="Email for newsletter"
           placeholder="tim@apple.com"
-          ref={inputEl}
           type="email"
         />
-        <InputRightElement width="6.75rem" height="1rem">
+        <InputRightElement width="6.75rem" >
           <Button
-            isLoading={loading}
             fontWeight="bold"
             h="1.75rem"
             size="sm"
-            onClick={subscribe}
           >Subscribe
           </Button>
          </InputRightElement> 
       </InputGroup>
+      </form>
     </SubscribeWrapper>
   );
 };
