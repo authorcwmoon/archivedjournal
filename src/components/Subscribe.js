@@ -21,7 +21,7 @@ export const Subscribe = () => {
   // const { colorMode } = useColorMode();
   // const bgColor = {
   //   light: 'blue.50',
-  //   dark: 'blue.900'
+  //   dark: 'awblue.900'
   // };
   // const borderColor = {
   //   light: 'blue.200',
@@ -87,31 +87,31 @@ export const Subscribe = () => {
   //     }
   
   // };
-    setLoading(false);
-    const { error } = await res.json();
+  //   setLoading(false);
+  //   const { error } = await res.json();
 
-    if (error) {
-      toast({
-        title: 'An error occurred.',
-        description: error,
-        status: 'error',
-        duration: 3000,
-        isClosable: true
-      });
+  //   if (error) {
+  //     toast({
+  //       title: 'An error occurred.',
+  //       description: error,
+  //       status: 'error',
+  //       duration: 3000,
+  //       isClosable: true
+  //     });
 
-      return;
-    }
+  //     return;
+  //   }
 
-    trackGoal('JYFUFMSF', 0);
-    inputEl.current.value = '';
-    toast({
-      title: 'Success!',
-      description: 'You are now subscribed.',
-      status: 'success',
-      duration: 3000,
-      isClosable: true
-    });
-  };
+  //   trackGoal('JYFUFMSF', 0);
+  //   inputEl.current.value = '';
+  //   toast({
+  //     title: 'Success!',
+  //     description: 'You are now subscribed.',
+  //     status: 'success',
+  //     duration: 3000,
+  //     isClosable: true
+  //   });
+  // };
 
   return (
     <SubscribeWrapper>
