@@ -22,6 +22,7 @@ export const Subscribe = () => {
      method="POST" 
      data-netlify="true" 
      data-netlify-honeypot="bot-field"
+     onSubmit="submit"
      action="https://cwmoon.com"
      >
     <input 
