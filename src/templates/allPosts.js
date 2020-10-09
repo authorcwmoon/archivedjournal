@@ -8,7 +8,6 @@ import {
   Subscribe,
   Pagination,
   Seo,
-  Sidebar,
 } from "../components"
 import { H1, P } from "../elements"
 
