@@ -9,7 +9,6 @@
     "@mdx-js/mdx": "^1.6.18",
     "@mdx-js/react": "^1.6.18",
     "babel-plugin-styled-components": "^1.11.1",
-    "babel-plugin-styled-componpnts": "^1.11.1",
     "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.27",
     "fathom-client": "^3.0.0",
