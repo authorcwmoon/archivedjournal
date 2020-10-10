@@ -23,20 +23,22 @@ export const Subscribe = () => {
           method="POST" 
           data-netlify-honeypot="bot-field"
           onSubmit="submit"
-          action="https://cwmoon.com"
+          action="https://www.cwmoon.com/everything-that-needs-to-be-written-already-has"
         >
         <input 
-        type="hidden" 
-        name="form-name" 
-        value="contact" />
+        class="hidden" 
+        name="bot-name" 
+        placeholder="Don't fill this out if you're a human"/>
+        
       <InputGroup size="md" mt={4}>
-        <input
-            name="email"
-            id="email"
-            type="email"
-            onfocus="this.placeholder = ''"
-            onblur="this.placeholder = 'Enter your Email'"
-            placeholder="Enter your Email"
+        <Input
+          class="form-control valid"
+          name="email"
+          id="email"
+          type="email"
+          onfocus="this.placeholder = ''"
+          onblur="this.placeholder = 'Enter your Email'"
+          placeholder="Enter your Email"
         />
         <InputRightElement width="6.75rem" >
           <Button
