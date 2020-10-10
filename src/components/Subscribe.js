@@ -1,15 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { trackGoal } from 'fathom-client';
 import {
-  
   InputGroup,
-  
   Input,
   InputRightElement,
   Button,
-  Text,
-  useToast,
-  useColorMode
 } from '@chakra-ui/core';
 import { SubscribeWrapper, P, H2 } from "../elements";
 
@@ -18,27 +12,25 @@ export const Subscribe = () => {
 
   return (
     <SubscribeWrapper>
-     <form netlify name="contact"
-     method="POST" 
-     data-netlify="true" 
-     data-netlify-honeypot="bot-field"
-     onSubmit="submit"
-     action="https://cwmoon.com"
-     >
-    <input 
-    type="hidden" 
-    name="form-name" 
-    value="contact" />
-
-     <H2>
+    <H2>
     Subscribe to the newsletter
       </H2>
       <P>
         Get emails from me about web development, tech, and early access to new
         articles.
       </P>
+      <form netlify name="contact"
+          method="POST" 
+          data-netlify-honeypot="bot-field"
+          onSubmit="submit"
+          action="https://cwmoon.com"
+        >
+        <input 
+        type="hidden" 
+        name="form-name" 
+        value="contact" />
       <InputGroup size="md" mt={4}>
-        <Input
+        <input
             name="email"
             id="email"
             type="email"
