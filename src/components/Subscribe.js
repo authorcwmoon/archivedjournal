@@ -8,6 +8,7 @@ import {
 import { SubscribeWrapper, P, H2 } from "../elements";
 
 
+
 export const Subscribe = () => {
 
   return (
@@ -26,13 +27,9 @@ export const Subscribe = () => {
           data-netlify-honeypot="bot-field"
           onSubmit="submit"
         >
-        <Input 
-        class="hidden" 
-        name="bot-name" 
-        placeholder="Don't fill this out if you're a human"/>
-        
       <InputGroup size="md" mt={4}>
-        <Input
+        <Input 
+          isFullWidth="true"
           class="form-control valid"
           name="email"
           id="email"
@@ -41,6 +38,10 @@ export const Subscribe = () => {
           onblur="this.placeholder = 'Enter your Email'"
           placeholder="Enter your Email"
         />
+        {/* <Input 
+        class="hidden" 
+        name="bot-name" 
+        placeholder="Don't fill this out if you're a human"/> */}
         <InputRightElement width="6.75rem" >
           <Button
             fontWeight="bold"
