@@ -1,9 +1,20 @@
-export default {
-    fonts: {
+
+import { theme as chakraTheme } from '@chakra-ui/core';
+
+const theme = {
+  ...chakraTheme,
+  fonts: {
+    ...chakraTheme.fonts,
       main: 'Libre Baskerville, sans-serif',
       heading: '"Libre Baskerville", sans-serif',
       monospace: 'Libre Baskerville, monospace',
-    },
+  },
+  fontWeights: {
+    normal: 400,
+    medium: 600,
+    bold: 700
+  },
+    
     colors: {
       main1: "hsl(207,70%,59%)",
       main2: "hsl(207,70%,94%)",
@@ -35,3 +46,5 @@ export default {
       shadow1: "0px 5px 20px rgba(30, 30, 31, 0.05)",
     },
   }
+
+  export default theme;

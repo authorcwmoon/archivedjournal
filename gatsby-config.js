@@ -17,11 +17,20 @@ module.exports = {
     },
 
     {
-      resolve: `gatsby-plugin-chakra-ui`,
+      resolve: `gatsby-plugin-styled-components`,
 
     },
 
 
+    {
+      resolve: `gatsby-plugin-chakra-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+
+    },
 
     {
       resolve: `gatsby-source-filesystem`,

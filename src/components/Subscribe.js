@@ -1,11 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
+import { SubscribeWrapper, P, H2 } from "../elements";
 import {
+  Box,
   InputGroup,
   Input,
   InputRightElement,
   Button,
 } from '@chakra-ui/core';
-import { SubscribeWrapper, P, H2 } from "../elements";
 
 
 
@@ -13,6 +14,14 @@ export const Subscribe = () => {
 
   return (
     <SubscribeWrapper>
+    <Box
+      border="1px solid"
+
+      borderRadius={4}
+      padding={6}
+      my={4}
+      w="100%"
+    >
     <H2>
     Subscribe to the newsletter
       </H2>
@@ -27,9 +36,10 @@ export const Subscribe = () => {
           data-netlify-honeypot="bot-field"
           onSubmit="submit"
         >
-      <InputGroup size="md" mt={4}>
+      <InputGroup size="md" mt={4} isFullWidth="true !important">
         <Input 
-          isFullWidth="true"
+          isFullWidth
+          flex="1"
           class="form-control valid"
           name="email"
           id="email"
@@ -53,6 +63,7 @@ export const Subscribe = () => {
         </InputRightElement>
       </InputGroup>
       </form>
+      </Box>
     </SubscribeWrapper>
   );
 };

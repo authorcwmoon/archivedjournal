@@ -3,7 +3,7 @@ import { createGlobalStyle, ThemeProvider } from "styled-components"
 import { MDXProvider } from "@mdx-js/react"
 import { preToCodeBlock } from "mdx-utils"
 import Theme from "./src/themes/theme"
-import { Table, Code } from "./src/components"
+import { Table, Code, Container } from "./src/components"
 import "./language-tabs.css"
 
 const GlobalStyles = createGlobalStyle`
@@ -38,8 +38,10 @@ const components = {
 export const wrapRootElement = ({ element }) => (
   <MDXProvider components={components}>
     <ThemeProvider theme={Theme}>
+        <Container>
       <GlobalStyles />
       {element}
+      </Container>
     </ThemeProvider>
   </MDXProvider>
 )

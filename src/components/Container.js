@@ -6,13 +6,14 @@ import { ThemeProvider } from "@chakra-ui/core"
 
 export const Container = ({ children }) => {
   return (
-    <ThemeProvider>
     <ContainerWrapper>
       <Nav />
+      <ThemeProvider>
       {children}
       <RightNav/>
       <Footer />
+      </ThemeProvider>
     </ContainerWrapper>
-    </ThemeProvider>
+   
   )
 }
