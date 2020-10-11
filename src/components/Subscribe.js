@@ -5,7 +5,6 @@ import {
   InputRightElement,
   Button,
   Form,
-
 } from '@chakra-ui/core';
 import { SubscribeWrapper, P, H2 } from "../elements";
 
@@ -29,13 +28,6 @@ export const Subscribe = () => {
           onSubmit="submit"
         >
         <Input 
-      <form netlify name="contact"
-          method="POST" 
-          data-netlify-honeypot="bot-field"
-          onSubmit="submit"
-          action="https://www.cwmoon.com/everything-that-needs-to-be-written-already-has"
-        >
-        <input 
         class="hidden" 
         name="bot-name" 
         placeholder="Don't fill this out if you're a human"/>
