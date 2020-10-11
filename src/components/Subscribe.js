@@ -4,7 +4,6 @@ import {
   Input,
   InputRightElement,
   Button,
-  Form,
 } from '@chakra-ui/core';
 import { SubscribeWrapper, P, H2 } from "../elements";
 
