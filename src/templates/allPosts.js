@@ -4,13 +4,13 @@ import {
   Container,
   Content,
   ContentCard,
-  // FeatureImage,
   Subscribe,
   Pagination,
   Seo,
 } from "../components"
 
 import { H1, P } from "../elements"
+
 
 const allPosts = ({ pageContext, data }) => {
   const { currentPage, numPages } = pageContext
@@ -30,7 +30,7 @@ const allPosts = ({ pageContext, data }) => {
           Journal
         </H1>
         <P color="dark2" textAlign="left">
-         I've been writing for the last 8 years in the margins of pages, random notebooks, and my text editor.  I started reading from hymn books and the back of Captain Crunch cereal boxes. This journal bridges the gap between the childhood mind and the enterprise entrepreneur journey. 
+         I'mkkkkkkkve been writing for the last 8 years in the margins of pages, random notebooks, and my text editor.  I started reading from hymn books and the back of Captain Crunch cereal boxes. This journal bridges the gap between the childhood mind and the enterprise entrepreneur journey. 
         </P>
         <H1 textAlign="left" margin="4rem 0 1rem 0rem">
           Lastest
